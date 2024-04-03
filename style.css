@@ -3,8 +3,12 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0; /* Background color for the overall page */
-    background-image: url('background-image.jpg'); /* Ensure this points to the correct path */
+    display: flex; /* Use flexbox for body */
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+    min-height: 100vh; /* Minimum height of 100% of the viewport height */
+    background-color: #f0f0f0;
+    background-image: url('background-image.jpg');
     background-size: cover;
     background-attachment: fixed;
 }
@@ -15,57 +19,59 @@ body {
     max-width: 460px; /* Increased max-width to accommodate longer header text */
     margin: 2% auto;
     padding: 20px;
-    background: #fff;
+    background: #F1EBEA; /* Container background color */
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     display: table; /* Make the container behave like a table */
 }
 
 /* Style the header */
-header h1 {
+header h1{
     text-align: center;
     margin: 10px 0;
-    font-size: 16px; /* Adjusted font size if necessary */
+    font-size: 16px; /* Adjusted font size */
     padding: 0 10px; /* Add padding to ensure text fits in a single line on narrow screens */
-    word-wrap: break-word; /* Allows long words to be broken and wrapped to the next line */
 }
-
-header h2 {
+header h2{
     text-align: center;
     margin: 10px 0;
+    font-size: 30px; /* Adjusted font size */
+    padding: 0 10px; /* Add padding to ensure text fits in a single line on narrow screens */
 }
-
 /* Style the form groups as table rows */
 .form-group {
     display: table-row; /* Each form group is a table row */
 }
 
-.form-group label, 
-.form-group input {
-    display: table-cell; /* Make label and input behave like table cells */
-    padding: 8px; /* Add padding for spacing */
-}
-
 .form-group label {
+    display: table-cell; /* Make label behave like table cell */
+    padding: 8px; /* Add padding for spacing */
     font-weight: bold;
     text-align: right; /* Align the text to the right */
     white-space: nowrap; /* Prevent labels from wrapping */
 }
 
-/* Style the text inputs and range slider */
-input[type="text"], input[type="range"], input[disabled] {
+/* Specifically style the input fields */
+.form-group input {
+    display: table-cell; /* Make input behave like table cell */
+    padding: 8px; /* Add padding for spacing */
+    vertical-align: middle; /* Adjust the vertical alignment */
+    background-color: #fff; /* Different background color for input fields */
     border: 1px solid #ccc;
     border-radius: 4px;
-    margin-bottom: 5px; 
+}
+
+/* Style the text inputs and range slider */
+input[type="text"], input[type="range"], input[disabled] {
+    margin-bottom: 8px; /* Space below each input field */
 }
 
 /* Enhancements for range slider appearance omitted for brevity */
-/* ... */
 
 /* Responsive adjustments */
 @media (max-width: 480px) {
     .container {
-        margin: 5% auto;
+        margin: 20px auto;
         width: 95%;
     }
 
