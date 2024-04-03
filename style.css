@@ -79,6 +79,6 @@ input[type="text"], input[type="range"], input[disabled] {
     }
 
     .form-group input {
-        width: 50%; /* Full width for inputs on small screens */
+        width: 100%; /* Full width for inputs on small screens */
     }
 }
