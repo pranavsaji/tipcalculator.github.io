@@ -1,0 +1,84 @@
+/* Base styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0; /* Background color for the overall page */
+    background-image: url('background-image.jpg'); /* Ensure this points to the correct path */
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* Centering the calculator on all screen sizes */
+.container {
+    width: auto;
+    max-width: 460px; /* Increased max-width to accommodate longer header text */
+    margin: 2% auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: table; /* Make the container behave like a table */
+}
+
+/* Style the header */
+header h1 {
+    text-align: center;
+    margin: 10px 0;
+    font-size: 16px; /* Adjusted font size if necessary */
+    padding: 0 10px; /* Add padding to ensure text fits in a single line on narrow screens */
+    word-wrap: break-word; /* Allows long words to be broken and wrapped to the next line */
+}
+
+header h2 {
+    text-align: center;
+    margin: 10px 0;
+}
+
+/* Style the form groups as table rows */
+.form-group {
+    display: table-row; /* Each form group is a table row */
+}
+
+.form-group label, 
+.form-group input {
+    display: table-cell; /* Make label and input behave like table cells */
+    padding: 8px; /* Add padding for spacing */
+}
+
+.form-group label {
+    font-weight: bold;
+    text-align: right; /* Align the text to the right */
+    white-space: nowrap; /* Prevent labels from wrapping */
+}
+
+/* Style the text inputs and range slider */
+input[type="text"], input[type="range"], input[disabled] {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 5px; 
+}
+
+/* Enhancements for range slider appearance omitted for brevity */
+/* ... */
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    .container {
+        margin: 5% auto;
+        width: 95%;
+    }
+
+    .form-group label, .form-group input {
+        display: block; /* Stack them on smaller screens */
+    }
+
+    .form-group label {
+        text-align: left; /* Align labels to the left on smaller screens */
+        padding-bottom: 0; /* Reduce space between label and input on small screens */
+    }
+
+    .form-group input {
+        width: 100%; /* Full width for inputs on small screens */
+    }
+}
