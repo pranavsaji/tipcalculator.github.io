@@ -75,7 +75,8 @@ input[type="text"], input[type="range"], input[disabled] {
         display: block; /* Adjust if necessary for smaller screens */
     }
     .container {
-        width: 50%; /* Adjust the width for smaller screens */
+        width: auto;
+/*         width: 50%; /* Adjust the width for smaller screens */ */
         margin: 20px auto; /* Centering with top and bottom margin */
     }
     /* Remove display: block; adjustments for labels and inputs to maintain table layout */
