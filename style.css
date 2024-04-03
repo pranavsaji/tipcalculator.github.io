@@ -72,7 +72,10 @@ input[type="text"], input[type="range"], input[disabled] {
 /* Responsive adjustments */
 @media (max-width: 480px) {
     body {
-        display: block; /* Adjust if necessary for smaller screens */
+/*         display: block; /* Adjust if necessary for smaller screens */ */
+        display: flex; /* Use flexbox for body */
+        align-items: center; /* Center content vertically */
+        justify-content: center; 
     }
     .container {
         width: auto;
